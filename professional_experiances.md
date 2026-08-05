@@ -1,39 +1,58 @@
-These are my proffetional experiances during my careere
+These are my professional experiences:
 
 # Spectral
-- **Location**: Amsterdam, Netherland
 - **Industry**: Energy Market
 
-## Sr. Software Engineer
+### Accomplishments:
+- Software Engineer (2025/02 - Present):
+    - [Market Integrations](./professional_experiances/Spectral/market_integrations.md)
+    - [Spectral Support Platform](./professional_experiances/Spectral/support_panel.md)
+    - [Data Query Optimization](./professional_experiances/Spectral/query_optimizer.md)
 
-- **Start date**: 2025/02
-- **End date**: Present
+
+
+# Ravindex
+- **Industry**: Fintech
 
 ### Accomplishments:
-At Spectral we had challange to handle many support tickets. it was mainly due to many support channels that support team can not monitor all of them properly. and At Spectral, our engineering team was spending a significant amount of time handling support tickets due to fragmented support workflows. Customer requests were spread across multiple channels—including Asana, Email, Zendesk, Twilio, and others—making it difficult for the support team to monitor all incoming requests efficiently. In addition, the lack of standardized troubleshooting documentation meant that many issues were escalated to engineering unnecessarily, resulting in longer resolution times, increased operational costs, and reduced team morale.
+- Software Engineer (2023/05 - 2025/01):
+    - [API Gateway](./professional_experiances/Ravindex/api_gateway.md)
+    - [Market Data Pipeline](./professional_experiances/Ravindex/market_data.md)
+    - [Lending Platform](./professional_experiances/Ravindex/lending.md)
+    - [Financial Statement](./professional_experiances/Ravindex/financial_statement.md)
 
-I identified these operational bottlenecks and owned the end-to-end design and implementation of an internal support platform to centralize customer communications and improve the support workflow.
 
-The platform integrated all customer support channels into a single interface, allowing the support team to monitor, prioritize, and respond to requests from one place. By consolidating tickets across channels, the system also reduced duplicate requests and improved visibility into customer issues.
+# IUST
+- **Industry**: IoT
 
-To further reduce unnecessary engineering escalations, I designed and implemented an integrated knowledge base. Support engineers could match incoming tickets to documented issues and follow standardized troubleshooting guides, enabling them to resolve a much larger percentage of requests independently and consistently.
-
-The project required extensive collaboration across Engineering, Customer Success, and Support teams. I facilitated multiple discovery and design sessions to understand each team's workflows, pain points, and requirements, ensuring the final solution aligned with operational needs.
-
-Technologies used
-
-Python and Django
-Celery for asynchronous task processing
-PostgreSQL
-Third-party integrations with Asana, Zendesk, Email, Twilio, and other support systems
-
-Business impact
-
-Reduced ticket resolution times by enabling faster triage and centralized monitoring.
-Reduced unnecessary escalations from Support to Engineering through standardized troubleshooting workflows and an integrated knowledge base.
-Lowered support costs by improving the efficiency of the support organization.
-Improved visibility across customer support channels and eliminated duplicate ticket handling.
-Increased collaboration between Engineering, Customer Success, and Support through a unified operational workflow.
+### Accomplishments:
+- Software Engineer (2021/07 - 2023/04):
+    - [Agile Coaching](./professional_experiances/IUST%20Research%20Institute/agile_coaching.md)
+    - [Data Visualization](./professional_experiances/IUST%20Research%20Institute/data_visualization.md)
+    - [QC Platform](./professional_experiances/IUST%20Research%20Institute/QC_platform.md)
+    - [Tracking System](./professional_experiances/IUST%20Research%20Institute/tracking_system.md)
 
 
 
+# Mehrafarin Broker
+- **Industry**: Fintech
+
+### Accomplishments:
+- Development Team Lead (2019/06 - 2021/06):
+    - [Mentorship](./professional_experiances/Mehrafarin%20Broker/mentorship.md)
+    - [Report System](./professional_experiances/Mehrafarin%20Broker/report_system.md)
+    - [Registration System](./professional_experiances/Mehrafarin%20Broker/registration_system.md)
+- Development Team Lead (2017/01 - 2019/05):
+    - [CMS](./professional_experiances/Mehrafarin%20Broker/CMS.md)
+    - [Flight Search](./professional_experiances/Mehrafarin%20Broker/flight_search.md)
+    - [IPG](./professional_experiances/Mehrafarin%20Broker/IPG.md)
+
+
+
+# Naji
+- **Industry**: IT infrastructure
+
+### Accomplishments:
+- Software Engineer (2014/06 - 2016/12):
+    - [Firewall](./professional_experiances/Naji/firewall.md)
+    - [Website Monitoring](./professional_experiances/Naji/website_monitoring.md)
