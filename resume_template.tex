@@ -1,0 +1,176 @@
+% 1. GENERAL TEXT FONT SIZE (Change 11pt to 10pt or 12pt here for normal body text)
+\documentclass[11 pt,a4paper]{article} %[cite: 1]
+
+% ==========================================
+%           STYLE & LAYOUT CONTROLS
+% ==========================================
+
+% 2. FONT SIZE VARIABLES (Use \LARGE, \Large, \large, \normalsize, \small, \footnotesize, etc.)
+\newcommand{\namesize}{\LARGE}                % Name in the header
+\newcommand{\headerpositionsize}{\Large}      % Position title in the header
+\newcommand{\sectionsize}{\large}             % Section titles (PROFILE, SKILLS, etc.)
+\newcommand{\companynamesize}{\large}         % Company names in experience
+\newcommand{\jobtitlesize}{\normalsize}       % Position titles in experience
+\newcommand{\datesize}{\small}                % Dates and locations
+\newcommand{\techstacksize}{\small}           % Tech stack tags at the end of bullets
+
+% 3. PAGE MARGINS (Adjust left, right, top, bottom spacing here)
+\usepackage[left=0.6in,right=0.6in,top=0.6in,bottom=0.6in]{geometry}
+
+% Packages required for formatting (do not modify)
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{hyperref}
+\usepackage{xcolor}
+\usepackage{multicol}
+
+% Set font to Carlito (Calibri equivalent for LaTeX)
+\usepackage[sfdefault]{carlito}
+\usepackage[T1]{fontenc}
+
+% 4. SPACING VARIABLES
+\newlength{\sectionspacebefore}
+\setlength{\sectionspacebefore}{1.5ex}  % Space above section titles
+
+\newlength{\sectionspaceafter}
+\setlength{\sectionspaceafter}{1ex}     % Space below section titles
+
+\newlength{\itemgap}
+\setlength{\itemgap}{2pt}               % Space between bullet points
+
+\newlength{\jobgap}
+\setlength{\jobgap}{1.2em}              % Vertical space between different job entries
+
+% 5. COLOR PALETTE (Change RGB values to customize the theme)
+\definecolor{darkblue}{rgb}{0.0,0.0,0.5}           % Link colors
+\definecolor{maintitlecolor}{RGB}{0, 51, 102}      % Navy Blue for main section titles
+\definecolor{companycolor}{RGB}{0, 102, 102}       % Teal for companies, locations, dates
+\definecolor{positioncolor}{RGB}{0, 77, 77}       % Rust for position titles
+\definecolor{techcolor}{RGB}{105, 105, 105}        % Dark Gray for tech stack text
+
+% 6. CUSTOM STYLES
+% Tech stack formatting at the end of bullets
+\newcommand{\techstack}[1]{\textcolor{techcolor}{\techstacksize #1}}
+
+% ==========================================
+%          END OF CONTROLS
+% ==========================================
+
+% Link setup
+\hypersetup{
+    colorlinks=true,
+    linkcolor=darkblue,
+    filecolor=darkblue,      
+    urlcolor=darkblue,
+}
+
+% Remove default vertical space added by the multicol package
+\setlength{\multicolsep}{0pt}
+
+% Custom section formatting applying the font size and spacing variables
+\titleformat{\section}{\color{maintitlecolor}\sectionsize\bfseries}{}{0pt}{}[\color{maintitlecolor}\titlerule]
+\titlespacing{\section}{0pt}{\sectionspacebefore}{\sectionspaceafter}
+
+% Disable paragraph indentation
+\setlength{\parindent}{0pt}
+
+\begin{document}
+\pagestyle{empty}
+
+% --- HEADER ---
+\begin{center}
+    {\namesize \textbf{\textcolor{maintitlecolor}{Nima Nazzari}}} \quad {\headerpositionsize \textcolor{positioncolor}{Software Engineer}} \\ \vspace{0.4em} %[cite: 1]
+    n.nazzari.work@gmail.com $|$ +31684262724 $|$ \textcolor{companycolor}{Amsterdam} $|$ \href{https://linkedin.com/in/nimannv}{linkedin.com/in/nimannv} %[cite: 1]
+\end{center}
+
+% --- PROFILE ---
+\section*{PROFILE}
+Ever-learning Software Engineer with \textbf{10+ years} of experience in Fintech, IoT, and IT sectors, specializing in system design and scalable solutions. Contributed as a cross-functional member to products serving \textbf{millions of users}, adept in Agile methodologies. %[cite: 1]
+
+% --- SKILLS ---
+\section*{SKILLS}
+\begin{multicols}{2}
+\begin{itemize}[leftmargin=0.15in, label={}, itemsep=\itemgap, topsep=0pt]
+    \item \textbf{Programming:} Python, Go, PHP, JavaScript %[cite: 1]
+    \item \textbf{Frameworks:} Django, FastAPI, Flask %[cite: 1]
+    \item \textbf{Databases:} SQL (Postgres, MySQL, SQLite), NoSQL (MongoDB, InfluxDB, TimeScale, Redis) %[cite: 1]
+    \item \textbf{Architectures:} SOA, MVC, Hexagonal %[cite: 1]
+    \item \textbf{APIs:} REST, gRPC, SOAP, GraphQL %[cite: 1]
+    \item \textbf{AI:} Ollama, Llamaindex %[cite: 1]
+    \item \textbf{Message-Brokers:} RabbitMQ, EMQX %[cite: 1]
+    \item \textbf{Monitoring:} Prometheus, Grafana, Loki, Sentry %[cite: 1]
+    \item \textbf{Workflow Automation:} Airflow, Mage.ai %[cite: 1]
+    \item \textbf{Data Analysis:} Pandas, Jupyter %[cite: 1]
+    \item \textbf{Test:} Unit testing, TDD, Selenium, Postman %[cite: 1]
+    \item \textbf{Cloud Services:} AWS, GCP %[cite: 1]
+    \item \textbf{Other Technologies:} Linux, Docker, GIT, CI/CD, HTML/CSS, MQTT %[cite: 1]
+\end{itemize}
+\end{multicols}
+
+% --- PROFESSIONAL EXPERIENCE ---
+\section*{PROFESSIONAL EXPERIENCE}
+
+{\companynamesize \textbf{\textcolor{companycolor}{Spectral (Energy Market)}}} $|$ {\jobtitlesize \textit{\textcolor{positioncolor}{Software Engineer}}} \hfill {\datesize \textit{\textcolor{companycolor}{Amsterdam, Netherland $|$ 2025/02 -- Present}}} %[cite: 1]
+\begin{itemize}[leftmargin=0.2in, itemsep=\itemgap, topsep=2pt]
+    \item Designed and developed the imbalance \textbf{energy market integrations}. \techstack{(Golang)} %[cite: 1]
+    \item Developed a \textbf{centralized support panel} with integrations with ticket channels: Zendesk, Asana, and Twilio. \techstack{(Django, Postgres, Celery)}. %[cite: 1]
+    \item Refactored the \textbf{data provider service} to optimize data source selection and split large queries, preventing crashes and enhancing efficiency. \techstack{(Golang, InfluxDB, TimeScale)}. %[cite: 1]
+    \item Created short videos to present challenges and proposals to stakeholders, improving \textbf{team clarity and focusing discussions.} %[cite: 1]
+\end{itemize}
+
+\vspace{\jobgap}
+
+{\companynamesize \textbf{\textcolor{companycolor}{Ravindex (Fintech)}}} $|$ {\jobtitlesize \textit{\textcolor{positioncolor}{Software Engineer}}} \hfill {\datesize \textit{\textcolor{companycolor}{2023/05 -- 2025/01 - (1 yr 8 mos)}}} %[cite: 1]
+\begin{itemize}[leftmargin=0.2in, itemsep=\itemgap, topsep=2pt]
+    \item Designed and implemented a \textbf{loan system managing} \textbf{\$2M in assets} in its first six months, supporting rapid early growth. %[cite: 1]
+    \item Developed a high-availability \textbf{Market Data Feed platform} that processed \textbf{over 500 market price updates per minute}, enabling real-time decision-making. \techstack{(Mage.ai, InfluxDB, RabbitMQ)}. %[cite: 1]
+    \item Developed and scaled a RESTful API Gateway to support \textbf{1 million requests/hour}. \techstack{(FastAPI, Redis)}. %[cite: 1]
+    \item Created and maintained \textbf{API documentation}, streamlining third-party integrations and \textbf{reducing onboarding time by about 50\%}. \techstack{(Postman, OpenAPI)}. %[cite: 1]
+\end{itemize}
+
+\vspace{\jobgap}
+
+{\companynamesize \textbf{\textcolor{companycolor}{IUST Research Institute (IoT)}}} $|$ {\jobtitlesize \textit{\textcolor{positioncolor}{Software Engineer}}} \hfill {\datesize \textit{\textcolor{companycolor}{2021/07 -- 2023/04 - (2 yrs}}} %[cite: 1]
+\begin{itemize}[leftmargin=0.2in, itemsep=\itemgap, topsep=2pt]
+    \item Developed a centralized, automated \textbf{Quality Control platform} and \textbf{reducing testing time by 60\%} through streamlined, automated tests for IoT devices. \techstack{(Django, PostgreSQL)} %[cite: 1]
+    \item Aggregated and visualized QC data, providing actionable insights and improving decision-making efficiency. \techstack{(Grafana, SQL)}. %[cite: 1]
+    \item Initiated and led \textbf{knowledge-sharing sessions} across 9 teams, disseminating agile practices, concepts, and tools to enhance collaboration and efficiency. %[cite: 1]
+    \item Led backend development for a child tracking system, enabling \textbf{real-time geolocation tracking for parents}. \techstack{(FastAPI, EMQX, InfluxDB)} %[cite: 1]
+\end{itemize}
+
+\vspace{\jobgap}
+
+% COMBINED MEHRAFARIN BROKER ENTRY
+{\companynamesize \textbf{\textcolor{companycolor}{Mehrafarin Broker (Fintech)}}} \hfill {\datesize \textit{\textcolor{companycolor}{2017/01 -- 2021/06 - (4 yrs 6 mos)}}} %[cite: 1]
+
+\vspace{0.3em} % Small space after company header and before first role
+
+{\jobtitlesize \textit{\textcolor{positioncolor}{Development Team Lead}}} \hfill {\datesize \textit{\textcolor{companycolor}{2019/06 -- 2021/06 - (1 yr 8 mos)}}} %[cite: 1]
+\begin{itemize}[leftmargin=0.2in, itemsep=\itemgap, topsep=2pt]
+    \item Mentored and coached \textbf{2 junior developers}, enhancing their skills in our stack and ensuring their successful integration into high-velocity projects. %[cite: 1]
+    \item Architected and deployed Iran's first non-attendance stockbroker registration system, boosting daily sign-ups by \textbf{300\%}. \techstack{(Django and PostgreSQL)}. %[cite: 1]
+    \item Implemented a data visualization panel, reducing manual reporting by \textbf{8 hours per week}. \techstack{(SQL, Grafana)}. %[cite: 1]
+\end{itemize}
+
+\vspace{0.3em} % Small space between roles within the same company
+
+{\jobtitlesize \textit{\textcolor{positioncolor}{Software Engineer}}} \hfill {\datesize \textit{\textcolor{companycolor}{2017/01 -- 2019/05}}} %[cite: 1]
+\begin{itemize}[leftmargin=0.2in, itemsep=\itemgap, topsep=2pt]
+    \item Engineered a multi-currency Internet Payment Gateway (IPG) that integrated with multiple banking systems, ensuring secure and efficient transactions. %[cite: 1]
+    \item Engineered a flight search aggregator, improving processing times by \textbf{35\%}. %[cite: 1]
+    \item Designed and deployed a custom CMS tailored for SEO, increasing content publication efficiency by \textbf{50\%}. %[cite: 1]
+\end{itemize}
+
+\vspace{\jobgap} % Standard space after the combined company entry
+
+{\companynamesize \textbf{\textcolor{companycolor}{Naji (IT infrastructure)}}} $|$ {\jobtitlesize \textit{\textcolor{positioncolor}{Software Engineer}}} \hfill {\datesize \textit{\textcolor{companycolor}{2014/01 -- 2016/12}}} %[cite: 1]
+\begin{itemize}[leftmargin=0.2in, itemsep=\itemgap, topsep=2pt]
+    \item Developed a product for uptime, speed, and security monitoring for the websites of various organizations with more than \textbf{75 million customers}. \techstack{(PHP, Python, MySQL)} %[cite: 1]
+    \item Implemented a PHP-based firewall management panel, reducing maintenance time by \textbf{30\%} and improving configuration accuracy. %[cite: 1]
+\end{itemize}
+
+% --- EDUCATION ---
+\section*{EDUCATION}
+{\companynamesize \textbf{\textcolor{companycolor}{Azarbaijan Madani University}}} $|$ {\jobtitlesize \textit{\textcolor{positioncolor}{Bachelor of Science, Computer Engineering (IT)}}} \hfill {\datesize \textit{\textcolor{companycolor}{2013 -- 2017}}} %[cite: 1]
+
+\end{document}
