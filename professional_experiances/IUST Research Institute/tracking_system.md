@@ -1,6 +1,6 @@
 ### Developing a Real-Time Geolocation Tracking System for Child Safety
 
-At IUST, I contributed to a tracking system designed to provide real-time visibility into children's, pets' and patients' (alzheimer's patients) location. The project was done to address safety concerns by enabling families to monitor their loved ones' location and receive alerts in case of unexpected movements.
+At IUST, I contributed to a tracking system designed to provide real-time visibility into children's, pets' and patients' (alzheimer's patients) location via a tracking watch and bracelet. The project aimed to address safety concerns by enabling families to monitor their loved ones' location and receive alerts in case of unexpected movements.
 
 My role focused on backend development, where I implemented the core services responsible for collecting, processing and delivering location data. I designed and built a scalable backend architecture with high performance that could handle frequent location updates from many devices while maintaining low latency and high reliability.
 
@@ -18,7 +18,7 @@ The system collected GPS coordinates from tracking devices and processed them th
 
 **Business impact**
 
-* Led backend development for a child tracking system that enabled real-time geolocation tracking for parents.
+* Led backend development for a the tracking system that enabled real-time geolocation tracking for parents.
 * Delivered low-latency location updates by designing an efficient backend architecture that processed frequent GPS data streams.
 * Enabled real-time notifications and geofence alerts through an event-driven system architecture.
 * Provided parents with round-the-clock visibility into their child's location, enhancing family safety and providing peace of mind.
